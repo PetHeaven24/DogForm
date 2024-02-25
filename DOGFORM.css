@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+   background: linear-gradient(135deg, #8E9264, #e1c360ff, #e9d490ff, #f1e5c0ff, #f4ecd3ff, #faf9f9ff); 
+  /* background: linear-gradient(225deg, #77a1acff, #a4e6f8ff, #bbedfaff, #d2f3fcff, #e9f9feff, #f4fcffff); */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(177, 176, 176, 0.315);
+  padding: 20px 40px;
+  border-radius: 5px;
+  border-radius: 10px;
+  height: 70.5vh;
+  overflow: hidden;
+  width: 30vw;
+  margin-left: 5%;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+}
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(31, 30, 30, 0.986);
+  padding: 15px;
+  font-family: inherit;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  height: 6vh;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 50px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #1a191994 solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #1a1919;
+  width: 24.84vw;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #1a1919;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #1a1919;
+  transform: translateY(-30px);
+}
+
+
+/*CHECKOUT*/
+
+table{
+  height: 60vh;
+  border: 1px solid #1a1919b0;
+  border-radius: 10px;
+  width: 35vw;
+  overflow: hidden;
+  width: 45vw;
+}
+
+td button{
+  display: block;
+  border: none;
+  border: 1px solid;
+  height: 25px;
+  border-radius: 10px;
+  width: 80px;
+}
+
+tr:first-child{
+  font-size: larger;
+}
+
+tr td:first-child{
+  padding-left: 5%;
+}
+tr td:last-child{
+  padding-left: 3%;
+  font-weight: 600;
+}
+
+
+
+td button{
+  font-family: 'Muli', sans-serif;
+  font-weight: 600;
+  margin-right: 2vw; 
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+td button:disabled{
+    cursor: not-allowed;
+}
+section div{
+  margin-top: 3.5%;
+  height: 8vh;
+  border: 1px solid #1a1919b0;
+  border-radius: 10px;
+  display: flex;
+  justify-content:space-between;
+  font-size: x-large;
+  font-weight: 800;
+  padding: 0 5% 0 5.5%;
+  overflow: hidden;
+}
+img{
+    height: 30px;
+    width: 30px;
+    margin-right: 15px;
+}
+.serv{
+    display: flex;
+    align-items: center;
+}
+.serv ~ td:last-of-type{
+    font-size: larger;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="DOGFORM.css" />
+    <title>Pet Heaven : Booking</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="form">
+        <h1>Appointment Request</h1>
+
+        <div class="form-control">
+          <input type="text" id="first" required>
+          <label>First Name</label>
+          <span class="error"></span>
+        </div>
+
+        <div class="form-control">
+          <input type="text" id="last" required>
+          <label>Last Name</label>
+          <span class="error"></span>
+        </div>
+
+        <div class="form-control">
+          <input type="email" id="email" required>
+          <label>Email</label>
+          <span class="error"></span>
+        </div>
+
+        <div class="form-control">
+          <input type="text" id="phone" required>
+          <label>Phone Number</label>
+          <span class="error"></span>
+        </div>
+
+        <div class="form-control">
+          <input type="text" required>
+          <label>Adresse</label>
+        </div>
+
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+
+
+    <section>
+        <table>
+            <tr >
+                <td><h1>Services</h1></td>
+                <td></td>
+                <td><h1>Prices</h1></td>
+            </tr>
+
+            <tr>
+                <td class="serv"><img src="pics/pet grooming.png" alt="Grooming">
+                    <h3>Pet Grooming Services</h3>
+                </td>
+                <td>
+                    <button class="btn1" onclick="add(1)">Add</button>
+                    <button id="btn1" onclick="remove(1)" disabled>Remove</button>
+                </td>
+                <td>450 DH</td>
+            </tr>
+
+            <tr>
+                <td class="serv"> 
+                    <img src="pics/pet boarding.png" alt="Grooming">
+                    <h3>Pet Boarding Facilities</h3></td>
+                <td>
+                    <button class="btn2" onclick="add(2)">Add</button>
+                    <button id="btn2" onclick="remove(2)" disabled>Remove</button>
+                </td>
+                <td>470 DH</td>
+            </tr>
+
+            <tr>
+                <td class="serv">
+                    <img src="pics/pet walking.png" alt="Grooming">
+                    <h3>Pet Walking Services</h3></td>
+                <td>
+                    <button class="btn3" onclick="add(3)">Add</button>
+                    <button id="btn3" onclick="remove(3)" disabled>Remove</button>
+                </td>
+                <td>300 DH</td>
+            </tr>
+
+            <tr>
+                <td class="serv">
+                    <img src="pics/pet dental.png" alt="Grooming">
+                    <h3>Pet Dental Care</h3></td>
+                <td>
+                    <button class="btn4" onclick="add(4)">Add</button>
+                    <button id="btn4" onclick="remove(4)" disabled>Remove</button>
+                </td>
+                <td>600 DH</td>
+            </tr>
+
+            <tr>
+                <td class="serv" >
+                    <img src="pics/pet training.png" alt="Grooming">
+                    <h3>Pet Training Programs</h3></td>
+                <td>
+                    <button class="btn5" onclick="add(5)">Add</button>
+                    <button id="btn5" onclick="remove(5)" disabled>Remove</button>
+                </td>
+                <td>500 DH</td>
+            </tr>
+
+            <tr>
+                <td class="serv">
+                    <img src="pics/pet daycare.png" alt="Grooming">
+                    <h3>Pet Daycare Services</h3></td>
+                <td>
+                    <button class="btn6" onclick="add(6)">Add</button>
+                    <button id="btn6" onclick="remove(6)" disabled>Remove</button>
+                </td>
+                <td>370 DH</td>
+            </tr>
+        </table>
+        <div>
+            <p>Total</p>
+            <p id="resultat">0 DH</p>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script> 
+        var somme = 0
+        var services = [
+            { nom: "Service 1", prix: 450 },
+            { nom: "Service 2", prix: 470 },
+            { nom: "Service 3", prix: 300 },
+            { nom: "Service 4", prix: 600 },
+            { nom: "Service 5", prix: 500 },
+            { nom: "Service 6", prix: 370 }
+        ];
+        var resultat = document.getElementById("resultat");
+        function add(nbr){
+            let btn = document.querySelector('.btn'+nbr);
+            btn.disabled= true
+            let bttn = document.getElementById('btn'+nbr);
+            bttn.disabled= false
+            somme+=services[nbr - 1].prix
+            resultat.textContent = `${parseFloat(somme)} DH`
+    
+        }
+        function remove(nbr){
+            let btn = document.querySelector('.btn'+nbr);
+            btn.disabled= false
+            let bttn = document.getElementById('btn'+nbr);
+            bttn.disabled= true
+            somme-=services[nbr - 1].prix
+            resultat.textContent = `${parseFloat(somme)} DH`
+        }
+    </script>
+
+
+
+  </body>
+</html>
